@@ -1,0 +1,197 @@
+/* General styles */
+#about {
+  padding: 10rem 2rem 5rem 2rem;
+  width: 100%;
+}
+
+.about-container {
+  display: grid;
+  max-width: 70rem;
+  margin: auto;
+  gap: 2rem;
+  grid-template-columns: 1.2fr 2.5fr;
+  grid-template-rows: auto;
+  grid-template-areas: "about-image about-text";
+}
+
+.about-box1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.about-box1 {
+  flex-direction: column;
+  grid-area: about-image;
+  overflow: hidden;
+}
+
+.about-box1 .about-pic {
+  max-width: 100%;
+  height: fit-content;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.about-box2 {
+  grid-area: about-text;
+  background-color: transparent !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  word-wrap: break-word;
+}
+
+.about-items {
+  background-color: #b7c5f6;
+  border-radius: 12px;
+}
+/*text*/
+.about-title {
+  font-family: "acorn";
+  font-size: 40px;
+  padding: 20px;
+}
+.about-title1 {
+  padding-bottom: 4rem;
+}
+.about-title2 {
+  text-align: start;
+  font-size: 45px;
+  color: #0083c4;
+}
+.about-text {
+  text-align: justify;
+  color: #0083c4;
+  padding: 1rem 0 0 0;
+}
+
+span {
+  position: relative;
+  height: 70px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+span::before {
+  content: "Bonjour!";
+  animation: words 20s infinite;
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+@keyframes words {
+  0%,
+  10% {
+    content: "Bonjour!";
+    opacity: 1;
+    transform: translateY(0);
+  }
+  11%,
+  20% {
+    content: "やあ!";
+    opacity: 1;
+    transform: translateY(0);
+  }
+  21%,
+  30% {
+    content: "Kamusta!";
+    opacity: 1;
+    transform: translateY(0);
+  }
+  31%,
+  40% {
+    content: "Ciao!";
+    opacity: 1;
+    transform: translateY(0);
+  }
+  41%,
+  50% {
+    content: "Hi!";
+    opacity: 1;
+    transform: translateY(0);
+  }
+  51%,
+  60% {
+    content: "안녕!";
+    opacity: 1;
+    transform: translateY(0);
+  }
+  61%,
+  70% {
+    content: "你好!";
+    opacity: 1;
+    transform: translateY(0);
+  }
+  71%,
+  80% {
+    content: "Hola!";
+    opacity: 1;
+    transform: translateY(0);
+  }
+  81%,
+  90% {
+    content: "Привет!";
+    opacity: 1;
+    transform: translateY(0);
+  }
+  91%,
+  100% {
+    content: "Hallo!";
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 950px) {
+  #about {
+    padding: 8rem 1rem;
+  }
+  .about-container {
+    grid-template-columns: 1fr 1.6fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+    grid-template-areas: "about-image about-text";
+  }
+}
+
+/*responsive for mobile*/
+@media only screen and (max-width: 668px) {
+  #about {
+    padding: 5.5rem 1.5rem;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 3rem;
+    grid-template-areas:
+      "about-image"
+      "about-text";
+  }
+
+  .about-box1 .about-pic {
+    max-width: 75%;
+  }
+
+  /*text*/
+  .about-title2 {
+    text-align: center;
+    font-size: 25px;
+  }
+  .about-text {
+    font-size: 16px;
+    text-align: justify;
+    color: #0083c4;
+    padding: 1rem 0 0 0;
+  }
+
+  .about-box2 {
+    width: 100%;
+  }
+}

@@ -1,0 +1,232 @@
+#projects {
+  padding: 10rem 2rem;
+}
+/*projects section*/
+.projects-container {
+  display: grid;
+  max-width: 70rem;
+  margin-inline: auto;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 23rem 23rem;
+  grid-template-areas:
+    "column1 column1 column2"
+    "column3 column4 column5";
+}
+/*text*/
+.project-title {
+  font-size: 80px;
+  line-height: 88px;
+  color: #0083c4;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.projects-items {
+  background-color: #fff;
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+/*project1 (pixelap)*/
+.projects-inside_item {
+  .project-img_inside {
+    position: relative;
+    top: -2rem;
+    right: 1rem;
+    width: 80%;
+    height: 100%;
+    filter: drop-shadow(5px 5px 5px #000);
+    object-fit: cover;
+  }
+  .project-btn {
+    position: relative;
+    top: 1rem;
+    font-size: 14px;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    color: #000;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}
+.projects-box1 {
+  grid-area: column1;
+  background-color: #e4b6fb;
+}
+
+/*project2 (weather app)*/
+.projects-items:nth-child(2) {
+  flex-wrap: wrap;
+  .project2-img_inside {
+    width: 80%;
+    height: fit-content;
+    position: relative;
+    top: 1.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: drop-shadow(5px 5px 5px #000);
+    object-fit: cover;
+  }
+}
+.projects-box2 {
+  grid-area: column2;
+  align-items: start;
+  justify-content: start;
+  background-color: #ffceb8;
+}
+
+/*coming soon loader*/
+.coming-soon {
+  align-items: start;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+.coming-soon_box {
+  animation: pulse 2s linear infinite;
+
+  width: 100%;
+  height: 50%;
+  background-color: #ddd;
+  border-radius: 12px;
+}
+.coming-soon_text {
+  animation: pulse 2s linear infinite;
+
+  position: relative;
+  top: 1rem;
+  width: 93%;
+  height: 6px;
+  border-radius: 50px;
+  background-color: #ddd;
+}
+.coming-soon_text2 {
+  width: 80%;
+  position: relative;
+  top: -3rem;
+  height: 6px;
+  border-radius: 50px;
+  background-color: #ddd;
+  animation: pulse 2s linear infinite;
+}
+.coming-soon_title {
+  width: 40%;
+  height: 15px;
+  background-color: #ddd;
+  position: relative;
+  top: -2rem;
+  border-radius: 50px;
+  animation: pulse 2s linear infinite;
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*project3*/
+.projects-box3 {
+  grid-area: column3;
+}
+/*project4*/
+.projects-box4 {
+  grid-area: column4;
+}
+/*project5*/
+.projects-box5 {
+  grid-area: column5;
+}
+
+/*responsive tablets*/
+
+@media only screen and (max-width: 950px) {
+  /*projects section*/
+  #projects {
+    padding: 8rem 1rem;
+  }
+  .projects-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 23rem 23rem 23rem;
+    grid-template-areas:
+      "column1 column1"
+      "column2 column3"
+      "column4 column5";
+  }
+  /*text*/
+  .project-title {
+    font-size: 70px;
+    line-height: 70px;
+  }
+  /*weather app project*/
+  .projects-items:nth-child(2) {
+    .project2-img_inside {
+      width: 60%;
+      height: fit-content;
+      position: relative;
+      top: 2rem;
+    }
+  }
+}
+
+/*responsive mobile*/
+@media only screen and (max-width: 650px) {
+  /*projects section*/
+  #projects {
+    padding: 8rem 0.8rem;
+  }
+  .projects-container {
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 23rem 20rem;
+    grid-template-areas:
+      "column1"
+      "column2"
+      "column3"
+      "column4"
+      "column5";
+  }
+  .project-title {
+    font-size: 50px;
+    line-height: 35px;
+  }
+  .projects-items {
+    flex-wrap: wrap;
+    border-radius: 0.7rem;
+  }
+  /*project1 (pixelap)*/
+  .projects-inside_item {
+    .project-img_inside {
+      top: -0.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70%;
+    }
+    .project-btn {
+      color: #fff;
+      background-color: #000;
+    }
+  }
+  /*weather app project*/
+  .projects-items:nth-child(2) {
+    .project2-img_inside {
+      width: 70%;
+      top: 2rem;
+    }
+  }
+
+  /*coming soon*/
+  .coming-soon {
+    display: none;
+  }
+}
